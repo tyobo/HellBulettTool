@@ -26,13 +26,17 @@ namespace HellBulletTool
         }
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.White, new RectangleF(0, 0, 10, 10));
+            for (int i = 0; i < 100; i++)
+            {
+                e.Graphics.FillRectangle(Brushes.Red, new RectangleF(0, i, 10, 10));
+                pictureBox1.Invalidate();
+            }
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            
         }
         private void button1_Click(object sender, EventArgs e)
         {
